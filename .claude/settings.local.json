@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:zed.dev)",
+      "Bash(cd /home/admin/wZed/src/lib && mkdir -p artificial-intelligence command-palette data-persistence editor-core extension-system keyboard-input marketplace-api mock-testing shared-utilities sharing-collaboration theme-management)",
+      "Bash(mv editor/* editor-core/)",
+      "Bash(mv extensions/* extension-system/extensions/)",
+      "Bash(mv marketplace/* marketplace-api/)",
+      "Bash(mv theme/* theme-management/)",
+      "Bash(mv utils/* shared-utilities/)",
+      "Bash(cp -r extensions/* extension-system/)",
+      "Bash(cp -r marketplace/* marketplace-api/)",
+      "Bash(cp -r theme/* theme-management/)",
+      "Bash(cp -r utils/* shared-utilities/)",
+      "Bash(cp -r storage/* data-persistence/)",
+      "Bash(cp -r ai/* artificial-intelligence/)",
+      "Bash(npx vinext *)",
+      "Skill(run)",
+      "Skill(run:*)",
+      "Bash(npx open-ready *)",
+      "Bash(curl -s http://localhost:3000)"
+    ],
+    "additionalDirectories": [
+      "/home/admin/wZed/src/lib"
+    ]
+  }
+}
