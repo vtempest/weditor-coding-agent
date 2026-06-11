@@ -342,9 +342,38 @@ const DropdownMenuSubContext = createContext<DropdownMenuSubContextValue | null>
 
 export function DropdownMenuSub({ children }: { children: ReactNode }) {
   const [open, setOpen] = useState(false);
+  const closeTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const handleMouseLeave = useCallback(() => {
+    // Delay closing to allow mouse movement to submenu
+    closeTimeoutRef.current = setTimeout(() => {
+      setOpen(false);
+    }, 300); // 300ms delay
+  }, []);
+
+  const handleMouseEnter = useCallback(() => {
+    // Cancel any pending close when mouse re-enters
+    if (closeTimeoutRef.current) {
+      clearTimeout(closeTimeoutRef.current);
+      closeTimeoutRef.current = null;
+    }
+  }, []);
+
+  useEffect(() => {
+    return () => {
+      if (closeTimeoutRef.current) {
+        clearTimeout(closeTimeoutRef.current);
+      }
+    };
+  }, []);
+
   return (
     <DropdownMenuSubContext.Provider value={{ open, setOpen }}>
-      <div className="relative" onMouseLeave={() => setOpen(false)}>
+      <div
+        className="relative"
+        onMouseLeave={handleMouseLeave}
+        onMouseEnter={handleMouseEnter}
+      >
         {children}
       </div>
     </DropdownMenuSubContext.Provider>

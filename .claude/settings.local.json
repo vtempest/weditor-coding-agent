@@ -23,7 +23,8 @@
       "Bash(grep -E \"\\\\.\\(tsx?|jsx?\\)$\")",
       "Bash(git commit -m ' *)",
       "mcp__codebase-memory-mcp__index_repository",
-      "mcp__codebase-memory-mcp__get_architecture"
+      "mcp__codebase-memory-mcp__get_architecture",
+      "mcp__codebase-memory-mcp__search_code"
     ],
     "additionalDirectories": [
       "/home/admin/Wedit/src/lib"

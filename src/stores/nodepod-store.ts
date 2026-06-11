@@ -176,7 +176,16 @@ export const useNodepodStore = create<NodepodState>((set, get) => ({
         files,
         workdir: "/project",
         swUrl: "/__sw__.js",
-        allowedFetchDomains: null,
+        allowedFetchDomains: [
+          "api.zed.dev",
+          "raw.githubusercontent.com",
+          "github.com",
+          "api.github.com",
+          "registry.npmjs.org",
+          "esm.sh",
+          "unpkg.com",
+          "cdn.jsdelivr.net",
+        ],
         onServerReady: (port: number, url: string) => {
           set((s) => {
             const newPorts = new Map(s.serverPorts);

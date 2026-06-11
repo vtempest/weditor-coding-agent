@@ -11,6 +11,7 @@
 import { handleImageOptimization, DEFAULT_DEVICE_SIZES, DEFAULT_IMAGE_SIZES, isImageOptimizationPath } from "vinext/server/image-optimization";
 import type { ImageConfig } from "vinext/server/image-optimization";
 import handler from "vinext/server/app-router-entry";
+import { serveSW } from "@scelar/nodepod/server";
 
 interface Env {
   ASSETS: Fetcher;
@@ -37,6 +38,12 @@ interface ExecutionContext {
 export default {
   async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
     const url = new URL(request.url);
+
+    // Nodepod service worker — intercepts /__preview__/ and /__virtual__/ routes
+    // to proxy requests to virtual HTTP servers running inside Nodepod.
+    if (url.pathname === "/__sw__.js") {
+      return serveSW(request);
+    }
 
     // CORS proxy for Nodepod virtual Node.js runtime — routes outgoing
     // http/https requests from browser-based Node.js code through the
