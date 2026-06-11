@@ -3,7 +3,7 @@
   "configVersion": 1,
   "workspaces": {
     "": {
-      "name": "wzed",
+      "name": "Wedit",
       "dependencies": {
         "@itsmeadarsh/warper": "^7.2.0",
         "@monaco-editor/react": "^4.7.0",

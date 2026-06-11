@@ -466,7 +466,7 @@ export async function getExtensionDetails(
 }
 
 /**
- * Check if extension is compatible with wZed
+ * Check if extension is compatible with Wedit
  */
 export function isExtensionCompatible(extension: ZedMarketplaceExtension): {
   compatible: boolean;
@@ -476,7 +476,7 @@ export function isExtensionCompatible(extension: ZedMarketplaceExtension): {
   if (extension.schema_version && extension.schema_version > 1) {
     return {
       compatible: false,
-      reason: `Requires schema version ${extension.schema_version} (wZed supports v1)`,
+      reason: `Requires schema version ${extension.schema_version} (Wedit supports v1)`,
     };
   }
 

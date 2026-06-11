@@ -1,6 +1,6 @@
 // Type definitions for the Zed extension manifest and extension API
 /**
- * Type definitions for Zed extension integration in wZed
+ * Type definitions for Zed extension integration in Wedit
  */
 
 import type * as monaco from "monaco-editor";
@@ -144,7 +144,7 @@ export interface ZedLanguageServerConfig {
   initialization_options?: Record<string, any>;
 }
 
-// --- wZed Extension API ---
+// --- Wedit Extension API ---
 
 export interface ExtensionContext {
   extension: LoadedExtension;

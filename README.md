@@ -1,10 +1,10 @@
-# wZed
+# Wedit
 
 A [Zed](https://zed.dev)-inspired playground for [Nodepod](https://github.com/ScelarOrg/Nodepod) — the browser-native Node.js runtime. Features split panes, an integrated terminal running real Node.js in the browser, Monaco code editing, git integration, AI assistant, and live preview — all without a backend.
 
-> **Experimental:** Both wZed and [Nodepod](https://github.com/ScelarOrg/Nodepod) are in early development. Expect bugs, missing features, and breaking changes.
+> **Experimental:** Both Wedit and [Nodepod](https://github.com/ScelarOrg/Nodepod) are in early development. Expect bugs, missing features, and breaking changes.
 
-> **Disclaimer:** wZed is not affiliated with [Zed Industries](https://zed.dev). This is an independent playground with a Zed-inspired design, built as a frontend for [Nodepod](https://github.com/ScelarOrg/Nodepod).
+> **Disclaimer:** Wedit is not affiliated with [Zed Industries](https://zed.dev). This is an independent playground with a Zed-inspired design, built as a frontend for [Nodepod](https://github.com/ScelarOrg/Nodepod).
 
 ![React](https://img.shields.io/badge/React-19.2-blue)
 ![Next.js](https://img.shields.io/badge/Next.js-16-black)
@@ -66,7 +66,7 @@ A [Zed](https://zed.dev)-inspired playground for [Nodepod](https://github.com/Sc
 ### Install and run
 
 ```bash
-git clone https://github.com/ScelarOrg/wZed.git weditor
+git clone https://github.com/ScelarOrg/Wedit.git weditor
 cd weditor
 npm install
 npm run dev
@@ -76,7 +76,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ### Extensions & Marketplace
 
-wZed supports real Zed extensions with a built-in marketplace! See [ZED_EXTENSIONS.md](ZED_EXTENSIONS.md) for documentation.
+Wedit supports real Zed extensions with a built-in marketplace! See [ZED_EXTENSIONS.md](ZED_EXTENSIONS.md) for documentation.
 
 **Browse the marketplace:**
 1. Open the Marketplace panel (Shopping Bag icon in status bar)
@@ -172,4 +172,4 @@ Each template comes with starter files and an optional auto-run command.
 
 ## Contributing
 
-Found a bug or have a feature request? [Open an issue](https://github.com/ScelarOrg/wZed/issues).
+Found a bug or have a feature request? [Open an issue](https://github.com/ScelarOrg/Wedit/issues).

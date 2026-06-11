@@ -1,5 +1,5 @@
 const fs = require('fs');
-const content = fs.readFileSync('/home/admin/wZed/src/lib/extension-loader.ts', 'utf-8');
+const content = fs.readFileSync('/home/admin/Wedit/src/lib/extension-loader.ts', 'utf-8');
 const lines = content.split('\n');
 
 lines.forEach((line, i) => {

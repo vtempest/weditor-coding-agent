@@ -8,7 +8,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "wZed — Code Editor",
+  title: "Wedit — Code Editor",
   description: "Zed-inspired playground for Nodepod — browser-native Node.js runtime",
   icons: {
     icon: "/favicon.ico",

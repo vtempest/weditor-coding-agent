@@ -1,6 +1,6 @@
 # AI Panel - Claudix Integration
 
-Enhanced AI assistant panel inspired by [Claudix](https://github.com/Haleclipse/Claudix), bringing polished UI/UX patterns and features to wZed's AI interface.
+Enhanced AI assistant panel inspired by [Claudix](https://github.com/Haleclipse/Claudix), bringing polished UI/UX patterns and features to Wedit's AI interface.
 
 ## Features
 
@@ -34,7 +34,7 @@ artificial-intelligence/
 
 ### Basic Usage
 
-The AIPanel is automatically used in wZed. Import it as usual:
+The AIPanel is automatically used in Wedit. Import it as usual:
 
 ```tsx
 import { AIPanel } from '@/components/artificial-intelligence/AIPanel';
@@ -169,7 +169,7 @@ import { AIPanel } from '@/components/artificial-intelligence/AIPanel-Legacy';
 
 ### Why Not Direct Vue Integration?
 
-Claudix uses Vue 3, but wZed uses React. Instead of adding Vue as a dependency, we:
+Claudix uses Vue 3, but Wedit uses React. Instead of adding Vue as a dependency, we:
 1. Analyzed Claudix's component architecture
 2. Ported the UI/UX patterns to React
 3. Maintained similar component structure
@@ -192,9 +192,9 @@ All components use TypeScript with strict types from `types.ts`:
 ## Credits
 
 - **Claudix**: [github.com/Haleclipse/Claudix](https://github.com/Haleclipse/Claudix)
-- **Original wZed AIPanel**: Legacy implementation
+- **Original Wedit AIPanel**: Legacy implementation
 - **Integration**: Enhanced version combining best of both
 
 ## License
 
-Follows wZed's license. Claudix patterns used under AGPL-3.0.
+Follows Wedit's license. Claudix patterns used under AGPL-3.0.

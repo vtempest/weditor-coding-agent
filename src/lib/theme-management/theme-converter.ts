@@ -1,6 +1,6 @@
-// Converts Zed theme format to wZed ThemeColors
+// Converts Zed theme format to Wedit ThemeColors
 /**
- * Converts Zed theme format to wZed ThemeColors format
+ * Converts Zed theme format to Wedit ThemeColors format
  */
 
 import type { Theme, ThemeColors } from "./themes";
@@ -65,7 +65,7 @@ interface ZedTheme {
 }
 
 /**
- * Convert Zed theme to wZed ThemeColors
+ * Convert Zed theme to Wedit ThemeColors
  */
 export function convertZedTheme(zedTheme: ZedTheme): Theme {
   const style = zedTheme.style || {};

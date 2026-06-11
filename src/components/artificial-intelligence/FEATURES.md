@@ -1,4 +1,4 @@
-# Claudix-Inspired Features in wZed AIPanel
+# Claudix-Inspired Features in Wedit AIPanel
 
 ## 🎨 Visual Enhancements
 

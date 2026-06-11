@@ -2,7 +2,7 @@
   "permissions": {
     "allow": [
       "WebFetch(domain:zed.dev)",
-      "Bash(cd /home/admin/wZed/src/lib && mkdir -p artificial-intelligence command-palette data-persistence editor-core extension-system keyboard-input marketplace-api mock-testing shared-utilities sharing-collaboration theme-management)",
+      "Bash(cd /home/admin/Wedit/src/lib && mkdir -p artificial-intelligence command-palette data-persistence editor-core extension-system keyboard-input marketplace-api mock-testing shared-utilities sharing-collaboration theme-management)",
       "Bash(mv editor/* editor-core/)",
       "Bash(mv extensions/* extension-system/extensions/)",
       "Bash(mv marketplace/* marketplace-api/)",
@@ -21,7 +21,7 @@
       "Bash(curl -s http://localhost:3000)"
     ],
     "additionalDirectories": [
-      "/home/admin/wZed/src/lib"
+      "/home/admin/Wedit/src/lib"
     ]
   }
 }

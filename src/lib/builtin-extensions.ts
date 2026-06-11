@@ -1,5 +1,5 @@
 /**
- * Built-in extensions that ship with wZed
+ * Built-in extensions that ship with Wedit
  * Re-exports from the extensions subdirectory
  */
 

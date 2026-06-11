@@ -2,7 +2,7 @@
 
 ## What Was Done
 
-Successfully integrated Claudix's UI/UX patterns into wZed's AIPanel component, creating an enhanced AI assistant interface with better visual design, improved functionality, and modern React architecture.
+Successfully integrated Claudix's UI/UX patterns into Wedit's AIPanel component, creating an enhanced AI assistant interface with better visual design, improved functionality, and modern React architecture.
 
 ## Files Created
 
@@ -64,7 +64,7 @@ src/components/artificial-intelligence/
 
 ### From Vue to React
 
-| Claudix Component | wZed Component | Status |
+| Claudix Component | Wedit Component | Status |
 |-------------------|----------------|--------|
 | `ChatInputBox.vue` | `InputArea.tsx` | ✅ Core features |
 | `ButtonArea.vue` | Part of `AIPanel-Enhanced` | ✅ Token indicator |
@@ -75,7 +75,7 @@ src/components/artificial-intelligence/
 
 ### Features Matrix
 
-| Feature | Claudix | wZed Before | wZed After |
+| Feature | Claudix | Wedit Before | Wedit After |
 |---------|---------|-------------|------------|
 | File attachments | ✅ | ❌ | ✅ |
 | Token usage bar | ✅ | ❌ | ✅ |
@@ -151,7 +151,7 @@ import ChatInputBox from './components/ChatInputBox.vue'
 </script>
 ```
 
-### wZed Enhanced (React)
+### Wedit Enhanced (React)
 ```tsx
 export function AIPanel() {
   const [input, setInput] = useState("");
@@ -294,7 +294,7 @@ export { AIPanel } from './AIPanel-Legacy';
   - Beautiful UI/UX patterns
   - Comprehensive features
 
-- **wZed**: Original AIPanel implementation
+- **Wedit**: Original AIPanel implementation
   - React + OpenRouter integration
   - Nodepod tools
   - Clean architecture
@@ -306,7 +306,7 @@ export { AIPanel } from './AIPanel-Legacy';
 
 ## License Notes
 
-- wZed: Follows project license
+- Wedit: Follows project license
 - Claudix: AGPL-3.0
 - Integration: UI patterns inspired by Claudix, implemented from scratch in React
   - No direct code copying

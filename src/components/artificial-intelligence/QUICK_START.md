@@ -135,7 +135,7 @@ If a response is taking too long, click the stop button (◼)
 
 ## 🐛 Found a Bug?
 
-Report issues or suggest features in the wZed repository!
+Report issues or suggest features in the Wedit repository!
 
 ---
 

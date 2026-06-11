@@ -126,7 +126,7 @@ export function TitleBar() {
     >
       {/* Left: App name + home + project breadcrumb */}
       <div className="flex items-center gap-1.5 min-w-0">
-        <span className="text-[12px] text-t1 font-medium ml-2">wZed</span>
+        <span className="text-[12px] text-t1 font-medium ml-2">Wedit</span>
         {!showHomeScreen && (
           <>
             <button
@@ -164,7 +164,7 @@ export function TitleBar() {
         </div>
       ) : (
         <div className="text-[11px] text-t4 font-medium absolute left-1/2 -translate-x-1/2 pointer-events-none">
-          {activeFileName ? `${activeFileName} — wZed` : "wZed"}
+          {activeFileName ? `${activeFileName} — Wedit` : "Wedit"}
         </div>
       )}
 

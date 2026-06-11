@@ -1,4 +1,4 @@
-// Built-in extensions that ship with wZed by default
+// Built-in extensions that ship with Wedit by default
 import { registerBuiltInExtension } from "./extension-loader";
 import type { ExtensionContext } from "./extension-types";
 

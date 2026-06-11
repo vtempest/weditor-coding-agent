@@ -2,7 +2,7 @@
 
 # Update imports script for reorganization
 
-cd /home/admin/wZed
+cd /home/admin/Wedit
 
 # Function to update imports in all files
 update_imports() {

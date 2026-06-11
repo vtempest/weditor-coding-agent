@@ -1,7 +1,7 @@
-# wZed Extension Framework Design
+# Wedit Extension Framework Design
 
 ## Overview
-This document outlines the design for a TypeScript/Next.js-based extension framework for wZed, inspired by Zed's Rust/WASM architecture but adapted for web environments.
+This document outlines the design for a TypeScript/Next.js-based extension framework for Wedit, inspired by Zed's Rust/WASM architecture but adapted for web environments.
 
 ## Architecture
 
@@ -106,7 +106,7 @@ type ExtensionCapability =
 ### 2. Extension Runtime
 
 #### 2.1 Isolation Strategy
-**Zed uses WASM for isolation**. For wZed (web-based), we have several options:
+**Zed uses WASM for isolation**. For Wedit (web-based), we have several options:
 
 1. **Web Workers** (Recommended for Phase 1)
    - Good isolation
@@ -396,7 +396,7 @@ export function ExtensionDetails({ extensionId }: Props) {
 
 ## Key Differences from Zed
 
-| Aspect | Zed | wZed |
+| Aspect | Zed | Wedit |
 |--------|-----|------|
 | Runtime | WASM (wasmtime) | Web Workers / Service Workers |
 | Language | Rust → WASM | TypeScript / JavaScript |
