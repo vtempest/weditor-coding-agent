@@ -38,6 +38,56 @@ export default {
   async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
     const url = new URL(request.url);
 
+    // CORS proxy for Nodepod virtual Node.js runtime — routes outgoing
+    // http/https requests from browser-based Node.js code through the
+    // Worker, bypassing browser CORS restrictions.
+    // Format: /__np__/<url-encoded-target-url>
+    if (url.pathname.startsWith("/__np__/")) {
+      if (request.method === "OPTIONS") {
+        return new Response(null, {
+          headers: {
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Methods": "*",
+            "Access-Control-Allow-Headers": "*",
+            "Access-Control-Max-Age": "86400",
+          },
+        });
+      }
+
+      const encoded = url.pathname.slice("/__np__/".length);
+      let targetUrl: string;
+      try {
+        targetUrl = decodeURIComponent(encoded);
+        const parsed = new URL(targetUrl);
+        if (parsed.protocol !== "http:" && parsed.protocol !== "https:") {
+          return new Response("Invalid protocol", { status: 400 });
+        }
+      } catch {
+        return new Response("Invalid proxy target URL", { status: 400 });
+      }
+
+      const proxyHeaders = new Headers(request.headers);
+      proxyHeaders.delete("host");
+
+      const proxyReq = new Request(targetUrl, {
+        method: request.method,
+        headers: proxyHeaders,
+        body: request.method !== "GET" && request.method !== "HEAD" ? request.body : undefined,
+      });
+
+      const resp = await fetch(proxyReq);
+      const respHeaders = new Headers(resp.headers);
+      respHeaders.set("Access-Control-Allow-Origin", "*");
+      respHeaders.set("Access-Control-Allow-Methods", "*");
+      respHeaders.set("Access-Control-Allow-Headers", "*");
+
+      return new Response(resp.body, {
+        status: resp.status,
+        statusText: resp.statusText,
+        headers: respHeaders,
+      });
+    }
+
     // Image optimization via Cloudflare Images binding.
     // The parseImageParams validation inside handleImageOptimization
     // normalizes backslashes and validates the origin hasn't changed.

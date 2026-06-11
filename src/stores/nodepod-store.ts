@@ -176,6 +176,7 @@ export const useNodepodStore = create<NodepodState>((set, get) => ({
         files,
         workdir: "/project",
         swUrl: "/__sw__.js",
+        allowedFetchDomains: null,
         onServerReady: (port: number, url: string) => {
           set((s) => {
             const newPorts = new Map(s.serverPorts);
@@ -194,6 +195,12 @@ export const useNodepodStore = create<NodepodState>((set, get) => ({
       const startupCmd = matchedTemplate?.startupCommand ?? null;
 
       set({ instance, booting: false, startupCommand: startupCmd });
+
+      // Enable CORS proxy so Nodepod's http/https polyfills can make
+      // outgoing requests through the server, bypassing browser CORS.
+      try {
+        localStorage.setItem("__corsProxyUrl", "/__np__/");
+      } catch { /* ignore in SSR */ }
 
       const projectId = getCurrentProjectId();
       if (projectId) {

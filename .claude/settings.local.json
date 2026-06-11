@@ -21,7 +21,9 @@
       "Bash(curl -s http://localhost:3000)",
       "Bash(pnpm add *)",
       "Bash(grep -E \"\\\\.\\(tsx?|jsx?\\)$\")",
-      "Bash(git commit -m ' *)"
+      "Bash(git commit -m ' *)",
+      "mcp__codebase-memory-mcp__index_repository",
+      "mcp__codebase-memory-mcp__get_architecture"
     ],
     "additionalDirectories": [
       "/home/admin/Wedit/src/lib"
