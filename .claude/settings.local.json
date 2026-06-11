@@ -18,7 +18,9 @@
       "Skill(run)",
       "Skill(run:*)",
       "Bash(npx open-ready *)",
-      "Bash(curl -s http://localhost:3000)"
+      "Bash(curl -s http://localhost:3000)",
+      "Bash(pnpm add *)",
+      "Bash(grep -E \"\\\\.\\(tsx?|jsx?\\)$\")"
     ],
     "additionalDirectories": [
       "/home/admin/Wedit/src/lib"

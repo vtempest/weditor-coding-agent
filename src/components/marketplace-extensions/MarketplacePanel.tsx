@@ -6,7 +6,6 @@
 "use client";
 import { useState, useEffect } from "react";
 import { useExtensionStore } from "@/stores/extension-store";
-import { useNodepodStore } from "@/stores/nodepod-store";
 import {
   fetchZedMarketplaceExtensions,
   searchExtensions,
@@ -93,8 +92,8 @@ export function MarketplacePanel() {
         return;
       }
 
-      // Resolve extension manifest location using registry + gitmodules
-      const resolved = await resolveExtensionManifest(ext.id);
+      // Resolve extension manifest location from repository URL
+      const resolved = await resolveExtensionManifest(ext);
 
       // Try to fetch manifest from resolved location
       let manifestText: string | undefined;
@@ -139,7 +138,7 @@ export function MarketplacePanel() {
   const handleViewDetails = async (ext: ZedMarketplaceExtension) => {
     try {
       const details = await getExtensionDetails(ext);
-      setSelectedExtension(details);
+      if (details) setSelectedExtension(details);
     } catch (e) {
       console.error("Failed to load extension details:", e);
     }

@@ -391,7 +391,9 @@ export function DropdownMenuSubContent({ children, className }: { children: Reac
       role="menu"
       aria-orientation="vertical"
       className={cn(
-        "absolute left-full top-0 ml-1 z-[201] min-w-[180px] bg-bg3 border border-scroll-thumb rounded-lg shadow-xl shadow-black/50 p-1 text-[12px]",
+        "fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2",
+        "sm:absolute sm:left-auto sm:top-0 sm:right-full sm:translate-x-0 sm:translate-y-0 sm:mr-1",
+        "z-[201] min-w-[180px] bg-bg3 border border-scroll-thumb rounded-lg shadow-xl shadow-black/50 p-1 text-[12px]",
         className,
       )}
     >
