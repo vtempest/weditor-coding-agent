@@ -20,7 +20,8 @@
       "Bash(npx open-ready *)",
       "Bash(curl -s http://localhost:3000)",
       "Bash(pnpm add *)",
-      "Bash(grep -E \"\\\\.\\(tsx?|jsx?\\)$\")"
+      "Bash(grep -E \"\\\\.\\(tsx?|jsx?\\)$\")",
+      "Bash(git commit -m ' *)"
     ],
     "additionalDirectories": [
       "/home/admin/Wedit/src/lib"
