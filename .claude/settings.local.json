@@ -24,7 +24,9 @@
       "Bash(git commit -m ' *)",
       "mcp__codebase-memory-mcp__index_repository",
       "mcp__codebase-memory-mcp__get_architecture",
-      "mcp__codebase-memory-mcp__search_code"
+      "mcp__codebase-memory-mcp__search_code",
+      "Bash(pkill -f \"vinext dev\")",
+      "Bash(git fsck *)"
     ],
     "additionalDirectories": [
       "/home/admin/Wedit/src/lib"

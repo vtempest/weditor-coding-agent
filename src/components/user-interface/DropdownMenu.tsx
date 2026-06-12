@@ -348,7 +348,7 @@ export function DropdownMenuSub({ children }: { children: ReactNode }) {
     // Delay closing to allow mouse movement to submenu
     closeTimeoutRef.current = setTimeout(() => {
       setOpen(false);
-    }, 300); // 300ms delay
+    }, 1000); // 1 second delay
   }, []);
 
   const handleMouseEnter = useCallback(() => {
